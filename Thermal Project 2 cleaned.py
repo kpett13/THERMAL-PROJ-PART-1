@@ -161,14 +161,17 @@ for pr in range(3,21):
     Wrev41, i41 = rev_irrev(h4, h1, s4, s1, T4, 0, -Qout41, mDotRatio)
     
     W12a = Wrev12-i12   #Right
-    W23a = Wrev23-i23   #Should be zero
     W34a = Wrev34-i34   #Right
     W41a = Wrev41-i41   #Right
     W56a = Wrev56-i56   #Right
-    W67a = Wrev67-i67   #Wrong
     W78a = Wrev78-i78   #Right
     W89a = Wrev89-i89   #Right
-    Wtota = W12a + W23a + W34a + W41a + W56a + W67a + W78a + W89a
+    Wtota = W12a + W34a + W41a + W56a + W78a + W89a
+    
+    nII12 = Wrev12/Win12
+    nII34 = Wout34/Wrev34
+    nII56 = Wrev56/Win56
+    nII78 = Wout78/Wrev78
     
     #Arrays for plots
     aPressureRatios.append(pr)    
